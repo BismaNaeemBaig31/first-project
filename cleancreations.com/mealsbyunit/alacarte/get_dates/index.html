@@ -1,0 +1,92 @@
+<div class="row">
+
+    <div class="col-lg-6 col-xs-12">
+            <div class="opop ">
+                        <table id="date_select" class="scrolls scroll_horizontal_custom">
+                <tr>
+                                            <td style="padding-left: 5px; padding-right: 10px; font-weight: bold;" colspan="3">
+                            <span class="month_date">June 2024</span>
+                        </td>
+                                            <td style="padding-left: 5px; padding-right: 10px; font-weight: bold;" colspan="4">
+                            <span class="month_date">July 2024</span>
+                        </td>
+                                    </tr>
+                <tr>
+                                                <td style="text-align:center; padding-right:10px;">
+                                <div onclick="grabAndGoChangeDate(this);" data-formatedDate="T3JkZXIgZm9yIDxicj4gPGI+U3VuZGF5LCBKdW5lIDIzLCAyMDI0PC9iPg==" class="square_date  active" style="display:block;" data-date="2024-06-23" title="Sun 2024-06-23">
+                                    <p class="week_date  primary">
+                                        Sun                                    </p>
+                                    <p class="day_date bold  primary">
+                                        23                                    </p>
+                                </div>
+                            </td>
+                                                        <td style="text-align:center; padding-right:10px;">
+                                <div onclick="grabAndGoChangeDate(this);" data-formatedDate="T3JkZXIgZm9yIDxicj4gPGI+V2VkbmVzZGF5LCBKdW5lIDI2LCAyMDI0PC9iPg==" class="square_date " style="display:block;" data-date="2024-06-26" title="Wed 2024-06-26">
+                                    <p class="week_date ">
+                                        Wed                                    </p>
+                                    <p class="day_date bold ">
+                                        26                                    </p>
+                                </div>
+                            </td>
+                                                        <td style="text-align:center; padding-right:10px;">
+                                <div onclick="grabAndGoChangeDate(this);" data-formatedDate="T3JkZXIgZm9yIDxicj4gPGI+U3VuZGF5LCBKdW5lIDMwLCAyMDI0PC9iPg==" class="square_date " style="display:block;" data-date="2024-06-30" title="Sun 2024-06-30">
+                                    <p class="week_date ">
+                                        Sun                                    </p>
+                                    <p class="day_date bold ">
+                                        30                                    </p>
+                                </div>
+                            </td>
+                                                        <td style="text-align:center; padding-right:10px;">
+                                <div onclick="grabAndGoChangeDate(this);" data-formatedDate="T3JkZXIgZm9yIDxicj4gPGI+V2VkbmVzZGF5LCBKdWx5IDAzLCAyMDI0PC9iPg==" class="square_date " style="display:block;" data-date="2024-07-03" title="Wed 2024-07-03">
+                                    <p class="week_date ">
+                                        Wed                                    </p>
+                                    <p class="day_date bold ">
+                                        03                                    </p>
+                                </div>
+                            </td>
+                                                        <td style="text-align:center; padding-right:10px;">
+                                <div onclick="grabAndGoChangeDate(this);" data-formatedDate="T3JkZXIgZm9yIDxicj4gPGI+U3VuZGF5LCBKdWx5IDA3LCAyMDI0PC9iPg==" class="square_date " style="display:block;" data-date="2024-07-07" title="Sun 2024-07-07">
+                                    <p class="week_date ">
+                                        Sun                                    </p>
+                                    <p class="day_date bold ">
+                                        07                                    </p>
+                                </div>
+                            </td>
+                                                        <td style="text-align:center; padding-right:10px;">
+                                <div onclick="grabAndGoChangeDate(this);" data-formatedDate="T3JkZXIgZm9yIDxicj4gPGI+V2VkbmVzZGF5LCBKdWx5IDEwLCAyMDI0PC9iPg==" class="square_date " style="display:block;" data-date="2024-07-10" title="Wed 2024-07-10">
+                                    <p class="week_date ">
+                                        Wed                                    </p>
+                                    <p class="day_date bold ">
+                                        10                                    </p>
+                                </div>
+                            </td>
+                                                        <td style="text-align:center; padding-right:10px;">
+                                <div onclick="grabAndGoChangeDate(this);" data-formatedDate="T3JkZXIgZm9yIDxicj4gPGI+U3VuZGF5LCBKdWx5IDE0LCAyMDI0PC9iPg==" class="square_date " style="display:block;" data-date="2024-07-14" title="Sun 2024-07-14">
+                                    <p class="week_date ">
+                                        Sun                                    </p>
+                                    <p class="day_date bold ">
+                                        14                                    </p>
+                                </div>
+                            </td>
+                                            </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xs-12">
+        <div class="order_day_wrapper">
+            <div class="current_date order">Order for <br> <b>Sunday, June 23, 2024</b></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(".square_date").click(function(e){ 		//console.log("aa");
+        $(".square_date").removeClass("active");
+        $(this).addClass("active");
+        e.preventDefault();
+        var date_selected = $(this).data("date");
+
+        mealsShowRefresh(date_selected);
+
+    });
+</script>
